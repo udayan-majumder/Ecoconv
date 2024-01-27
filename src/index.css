@@ -45,7 +45,7 @@ display: flex;
 .login-image{
   height: 100%;
   width: 40%;
-  background-image: url(./assets/login-image.jpg);
+  background-image: url(/public/assets/login-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius:15px ;
@@ -75,7 +75,7 @@ display: flex;
   height: 80px;
   width: 80px;
   /* background-color: cyan; */
-  background-image: url(./assets/logo.png);
+  background-image: url(/public/assets/logo.png);
   background-size: contain;
 }
 .sub-main{
@@ -87,7 +87,7 @@ display: flex;
   height: 100%;
   width: 100%;
   position: relative;
-  background-image: url(./assets/final-bg.jpg);
+  background-image: url(/public/assets/final-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   /* border-radius: 15px; */
@@ -115,7 +115,7 @@ display: flex;
 .nav-logo{
   height: 70px;
   width: 70px;
-  background-image: url(./assets/logo.png);
+  background-image: url(/public/assets/logo.png);
   background-size: cover;
 }
 .shop-btn{
@@ -127,7 +127,7 @@ display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  background-image: url(./assets/shopping-icon.png);
+  background-image: url(/public/assets/shopping-icon.png);
   background-repeat: no-repeat;
   background-size:cover;
   /* margin-left: 120px; */
