@@ -2,7 +2,7 @@
 
 "0":{"product":{
     "name":"Polyethylene-Terephthalate ",
-    "image":"/public/assets/PET(icon).jpg",
+    "image":"public/assets/PET(icon).jpg",
      "price":{
         "i":"50",
         "ii":"53",
