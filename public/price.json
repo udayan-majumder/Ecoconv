@@ -16,7 +16,7 @@
 }},
 "1":{"product":{
    "name":"High-Density-Polyethylene",
-    "image":"/public/assets/HDPE(icon).jpg",
+    "image":"./assets/HDPE(icon).jpg",
     "price":{
        "i":"100",
        "ii":"103",
@@ -29,7 +29,7 @@
 }},
 "2":{"product":{
    "name":"Polyvinyl-Chloride ",
-    "image":"/public/assets/PVC(icon).jpg",
+    "image":"./assets/PVC(icon).jpg",
     "price":{
        "i":"90",
        "ii":"93",
@@ -42,7 +42,7 @@
 }},
 "3":{"product":{
    "name":"Low-Density-Polyethylene ",
-    "image":"/public/assets/LDPE(icon).jpg",
+    "image":"./assets/LDPE(icon).jpg",
     "price":{
        "i":"105",
        "ii":"108",
@@ -55,7 +55,7 @@
 }},
 "4":{"product":{
    "name":"Polypropylene",
-    "image":"/public/assets/PP(icon).jpg",
+    "image":"./assets/PP(icon).jpg",
     "price":{
        "i":"85",
        "ii":"86",
@@ -68,7 +68,7 @@
 }},
 "5":{"product":{
    "name":"Polystyrene",
-    "image":"/public/assets/PS(icon).jpg",
+    "image":"./assets/PS(icon).jpg",
     "price":{
        "i":"100",
        "ii":"104",
