@@ -11,8 +11,8 @@
         "v":"62"
      },
      "class":"grade-btn",
-     "productindex":0
-     
+     "productindex":0,
+     "productdetails":"Polyethylene terephthalate (PET) is a commonly used thermoplastic polymer resin of the polyester family. It's often used in synthetic fibers for clothing, containers for liquids and foods, and various other applications."
 }},
 "1":{"product":{
    "name":"High-Density-Polyethylene",
@@ -25,7 +25,8 @@
        "v":"112"
     },
     "class":"grade-btn",
-    "productindex":1
+    "productindex":1,
+    "productdetails":"High-density polyethylene (HDPE) is a versatile thermoplastic known for its high strength-to-density ratio, making it ideal for various applications such as bottles, pipes, and packaging. "
 }},
 "2":{"product":{
    "name":"Polyvinyl-Chloride ",
@@ -38,7 +39,8 @@
        "v":"100"
     },
     "class":"grade-btn",
-    "productindex":2
+    "productindex":2,
+    "productdetails":"Polyvinyl chloride (PVC) is a synthetic polymer widely used in construction, healthcare, and consumer goods. It's valued for its durability, chemical resistance, and affordability. PVC is commonly found in pipes, window frames, flooring, medical tubing, and packaging materials."
 }},
 "3":{"product":{
    "name":"Low-Density-Polyethylene ",
@@ -51,7 +53,8 @@
        "v":"117"
     },
     "class":"grade-btn",
-    "productindex":3
+    "productindex":3,
+    "productdetails":"Low-density polyethylene (LDPE) is a thermoplastic polymer known for its flexibility, toughness, and moisture resistance. It is commonly used in packaging films, plastic bags, squeeze bottles, and various molded products. LDPE is characterized by its relatively low tensile strength and transparency."
 }},
 "4":{"product":{
    "name":"Polypropylene",
@@ -64,7 +67,8 @@
        "v":"94"
     },
     "class":"grade-btn",
-    "productindex":4
+    "productindex":4,
+    "productdetails":"Polypropylene (PP) is a thermoplastic polymer used in a wide range of applications due to its versatility and durability. It is known for its resistance to heat, chemicals, and fatigue, making it suitable for use in packaging, textiles, automotive components, and medical devices."
 }},
 "5":{"product":{
    "name":"Polystyrene",
@@ -77,7 +81,8 @@
        "v":"114"
     },
     "class":"grade-btn",
-    "productindex":5
+    "productindex":5,
+    "productdetails":"Polystyrene (PS) is a versatile plastic known for its light weight, rigid structure, and excellent insulation properties. It is commonly used in packaging materials, disposable cups and plates, insulation boards, and various consumer products. Polystyrene can exist in two forms: solid (used in products like disposable cutlery) and foam (used in insulation and packaging). "
 }}
 
 }

@@ -18,6 +18,11 @@ a{
 .main{
   height: 100vh;
   width: 100%;
+  position: relative;
+  z-index: 0px;
+}
+.sub-main{
+  position: relative;
 }
 .login-div{
   height: 100vh;
@@ -240,7 +245,7 @@ display: flex;
   justify-content: center;
   background-color:#ffffff;
   border-top: 40px solid #649e92ff;
-  /* border-bottom: 40px solid #649e92ff; */
+  border-bottom: 40px solid #649e92ff;
 }
 .heading-text{
   font-family: "Playfair Display";
@@ -333,4 +338,416 @@ border-radius: 15px;
   font-family: "Roboto Slab";
   font-size: 10px;
   letter-spacing: 1px;
+}
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inside-popup{
+  height: 60%;
+  width: 50%;
+  /* background-color: cyan; */
+}
+.product-details{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+.image-name-of-product{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  /* align-items: center; */
+  justify-content: center;
+  /* background-color: #649e92ff; */
+
+}
+.product-name-price{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 15px;
+}
+.product-name-buy{
+  font-family: "Poppins";
+  font-size: 15px;
+  /* color: #649e92ff; */
+  font-weight: 600;
+}
+.product-price-buy{
+  font-family: "Roboto Slab";
+  font-size: 12px;
+  /* color: #649e92ff; */
+  font-weight: 400;
+}
+.buying-option-of-product{
+  height: 100%;
+  width: 50%;
+  background-color:#649e92ff;
+  display: flex;
+  flex-direction: column;
+  color:#fff;
+  align-items: center;
+}
+.upper-name-btn{
+height:30%;
+width: 95%;
+display: flex;
+flex-direction: column;
+align-items: center;
+/* justify-content: space-evenly; */
+/* gap:5px */
+}
+.upper-name-btn-inside{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details-heading-text{
+  font-size: 14px;
+  font-family: "Poppins";
+  letter-spacing: 1px;
+}
+.details-text{
+  font-size: 10px;
+  font-family: "Ubuntu";
+}
+.exit-popup{
+  height: 20px;
+  width: 40px;
+  background-color:#649e92ff;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+.grade-container{
+  height: 15%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+.grade-text{
+  font-family: "Poppins";
+  color: #fff;
+  font-size:14px;
+  letter-spacing: 1px;
+}
+.grade-btn-holder{
+  width: 100%;
+  display: flex;
+  gap: 10px ;
+
+}
+.grade-btn{
+  height: 20px;
+  width: 20px;
+  color: #fff;
+  font-size: 10px;
+  background-color: #649e92ff;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.grade-btn-new{
+  height: 20px;
+  width: 20px;
+  color: #649e92ff;
+  font-size: 10px;
+  background-color: #fff;
+  border: 1px solid white;
+  border-radius: 3px;
+
+}
+.type-container{
+  height: 15%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom:10px;
+
+}
+.type-text{
+  font-family: "Poppins";
+  color: #fff;
+  font-size:14px;
+  letter-spacing: 1px;
+}
+.type-btn-container{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.type-btn{
+  height: 20px;
+  width: 60px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #649e92ff;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-family: "Ubuntu";
+}
+.type-btn-new{
+  height: 20px;
+  width: 60px;
+  color: #649e92ff;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-family: "Ubuntu";
+}
+.quantity-container{
+  height: 10%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quantity-container input{
+  height: 20px;
+  width: 70px;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #fff;
+  font-family: "Ubuntu";
+  border-bottom: 1px solid #fff;
+  background-color: #649e92ff;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.quantity-text{
+  letter-spacing: 1px;
+  font-family: "Poppins";
+}
+.price-buy-container{
+  height: 25%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ /* border-top: 1px solid white; */
+}
+.total-price-container{
+  color: #fff;
+  font-size: 18px;
+  background-color: #649e92ff;
+  font-family: "Ubuntu";
+}
+.buy-btn{
+  height: 30px;
+  width: 90px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  color: #649e92ff;
+  font-family: "Poppins";
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.final-buy{
+  border-radius: 3px;
+  height: 30%;
+  width: 30%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.final-buy input{
+  height: 20px;
+  width: 90%;
+  font-family: "Ubuntu";
+  font-size: 14px;
+  border: none;
+  border-bottom:2px solid #649e92ff ;
+  padding: 0px 10px;
+  outline: none;
+}
+.cancel-btn{
+  height: 30px;
+  width: 90px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  color: rgb(251, 6, 6);
+  font-family: "Poppins";
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.final-total{
+  font-family: "Poppins";
+  letter-spacing: 1px;
+}
+.Done{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:50px;
+height: 30%;
+width: 30%;
+background-color: #fff;
+}
+.purchased-text{
+  font-family: "Poppins";
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.Done-btn{
+  background-color: rgb(255, 201, 51);
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 15px;
+  font-family: "Ubuntu";
+  letter-spacing: 1px;
+}
+.third-page{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.third-page-heading{
+  font-size: 40px;
+  font-family: "Roboto Slab";
+  color: #649e92ff;
+}
+.third-page-content{
+  height: 70%;
+  width: 80%;
+  display: flex;
+  /* background-color: aqua; */
+}
+.third-page-text{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.textline{
+  height: 40px;
+  width: 100%;
+  color: #649e92ff;
+  font-family: "Rubik";
+  font-size: 16px;
+}
+.Points{
+  font-weight: 600;
+  color: rgb(39, 147, 82);
+
+}
+.third-page-photo{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+  background-image: url(/public/assets/download.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fourth-page{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fourth-page-heading{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #649e92ff;
+  font-family: "Ubuntu";
+  font-size: 40px;
+  font-weight: 400;
+ 
+}
+.fourth-page-content{
+  height: 70%;
+  width: 80%;
+  /* background-color: aqua; */
+ display: flex;
+ justify-content: space-around;
+align-items: center;
+
+}
+.message-cards{
+  height: 90%;
+  width: 30%;
+  background-color:#649e92ff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.message-heading{
+  height: 30px;
+  color: #fff;
+  font-family: "Roboto Slab";
+  letter-spacing: 1px;
+  font-size: 25px;
+  border-bottom: 2px solid white;
+
+}
+.message-text{
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 14px;
+}
+.email-div{
+  height: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+
+}
+.email-div input{
+  height: 30px;
+  width: 40%;
+  outline: none;
+  border: none;
+  border: 1px solid #649e92ff;
+  border-radius: 15px;
+  padding: 0px 5px;
+}
+.email-div button{
+  height: 30px;
+  width: 120px;
+  border: none;
+  background-color: #649e92ff;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "Ubuntu";
 }

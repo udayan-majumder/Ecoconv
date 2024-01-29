@@ -10,15 +10,20 @@ import { getAnalytics } from "firebase/analytics";
 
 function App() {
   const [window_count, setCount] = useState(0)
-  const[shopping_count,setshopcount]=useState(0);
+  const[curr_product,setcurrproduct]=useState(0);
   const[price_arr,setPriceList]=useState([])
-  const[cart_window,setcartwindow]=useState(0)
+  const[only_price,setprice]=useState([])
+  const[curr_grade_btn,setgradebtn]=useState(null)
+  const[grade_price,setgradeprice] =useState(0)
   const[cart_items,setcartitems]=useState([])
   const [addbtn,updateaddbtn]=useState(0)
   const product_positon= useRef(0);
-  const [carttext,settext]=useState('ADD')
+  const [curr_type,setcurrtype]=useState(0)
+  const[curr_quantity,setcurrquantity]=useState(1)
+  const[total_price,settotalprice]=useState(0)
+  const[popupchange,setpopupchange] =useState(0)
+console.log(curr_quantity)
   
- 
   const firebaseConfig = {
     apiKey: "AIzaSyDj-KemQXJCgoVivjSvqHR7TaBNrGgTCKg",
     authDomain: "ecoconv-fb137.firebaseapp.com",
@@ -60,7 +65,6 @@ const getdata= ()=>{
     setPriceList(data)
   })
 }
-
 
 const scrollToLeft =()=>{
   if (product_positon.current) {
@@ -150,21 +154,22 @@ return (
                       <div className="product-price">{final.price.i} INR</div>
                     </div>
                     <button className="Add-to-cart-btn" onClick={()=>{
-                     addtocart(final.productindex);
+                     setcurrproduct(final.productindex);
                      if(addbtn==0){
+                      setprice(final.price)
                       updateaddbtn(1)
+                      
                      }
-                     else{
+                     else if(addbtn==1){
                       updateaddbtn(0)
                      }
                       
                     }}>
-{cart_items.includes(final.productindex)? "DONE" : "ADD"}
+{(addbtn==1)? "DONE" : "BUY"}
 
                     </button>
                   </div>
                 </div>
-                .
               ))))))
               // console.log(price_arr[0].product.image)
            }
@@ -174,6 +179,130 @@ return (
             <button className='scroll-btn' onClick={scrollToRight}>Prev</button>
            <button className='scroll-btn' onClick={scrollToLeft}>Next</button>
            </div>
+          </div>
+          <div className={(addbtn===1)?"popup":"blank"}>
+            <div className={(popupchange===0)?"inside-popup":"blank"}>
+              <div className="product-details">
+                <div className="image-name-of-product">
+                  <img src={price_arr[curr_product].product.image} alt="" />
+                  <div className="product-name-price">
+                  <div className="product-name-buy">{price_arr[curr_product].product.name}</div>
+                  <div className="product-price-buy">{only_price.i} INR</div>
+                  </div>
+                </div>
+                <div className="buying-option-of-product">
+                  <div className="upper-name-btn">
+                   <div className="upper-name-btn-inside">
+                    <div className="details-heading-text">Details</div>
+                     <button className="exit-popup" onClick={
+                      ()=>{
+                        updateaddbtn(0)
+
+                      }
+                     }>x</button>
+                   </div>
+                   <div className="details-text">{price_arr[curr_product].product.productdetails}</div>
+                  </div>
+                  <div className="grade-container">
+                    <div className="grade-text">Grade</div>
+                    <div className="grade-btn-holder">{
+                      Object.values(only_price).map((data,index)=>(
+                      <button key= {index} className={(curr_grade_btn!=index)? "grade-btn":"grade-btn-new"} onClick={()=>{
+                      setgradebtn(index)
+                      setgradeprice(data)
+                      }}>{index}</button>
+                      ))
+                    }</div>
+                  </div>
+                  <div className="type-container">
+                    <div className="type-text">Type</div>
+                    <div className="type-btn-container">
+                      <button className={(curr_type==0)? "type-btn":"type-btn-new"} onClick={()=>{
+                       setcurrtype(1)
+                      }}>Sheet</button>
+                      <button className={(curr_type==1)? "type-btn":"type-btn-new"} onClick={()=>{
+                       setcurrtype(0)
+                      }}>Granular</button>
+                    </div>
+                  </div>
+                  <div className="quantity-container">
+                    <input type="number" defaultValue={curr_quantity} onChange={(e)=>{
+                     setcurrquantity(e.currentTarget.value)
+                    }}/>
+                    <div className="quantity-text">:Pack</div>
+                  </div>
+                  <div className="price-buy-container"> 
+                   <div className="total-price-container">Total : {grade_price*curr_quantity} INR</div>
+                  <button className="buy-btn" onClick={()=>{
+                    settotalprice(grade_price*curr_quantity)
+                    setpopupchange(1)
+
+                  }}>Buy Now</button>
+                  </div>
+                
+                </div>
+
+              </div>
+            </div>
+            <div className={(popupchange===1)?"final-buy":"blank"}>
+              <input type="text" placeholder='Name'/>
+              <input type="number" placeholder='Number'/>
+              <input type="text" placeholder='UPI ID' />
+              <div className="final-total">Total : {total_price} INR</div>
+              <div className="final-but-btn">
+                <button className='cancel-btn' onClick={()=>{
+                  setpopupchange(0)
+                }}>Cancel</button>
+                <button className='buy-btn' onClick={()=>{
+                  setpopupchange(2)
+                }}>Confirm</button>
+              </div>
+            </div>
+            <div className={(popupchange===2)?"Done":"blank"}>
+              <div className="purchased-text">Your order is successfully placed</div>
+            <button className='Done-btn' onClick={()=>{
+              setpopupchange(0)
+              updateaddbtn(0)
+            }}>Okay</button></div>
+            
+          </div>
+          <div className="third-page">
+            <div className="third-page-heading">What's special about us</div>
+            <div className="third-page-content">
+              <div className="third-page-text">
+              <div className="textline"><span className='Points'>• Flexible Ordering:</span>The ability to order plastic materials in various<br></br> quantities without minimum order constraints.</div>
+              <div className="textline"><span className='Points'>• Cost-Effective Solutions:</span>Affordable pricing that makes recycled <br></br> materials an attractive option compared to traditional sources.</div>
+              <div className="textline"><span className='Points'>• Online Ordering Facilities:</span>Convenient online platforms for placing <br></br> orders, ensuring ease of use and accessibility.</div>
+              <div className="textline"><span className='Points'>• Eco-Friendly Practices:</span>Alignment with businesses and individuals<br></br>  committed to sustainability and eco-friendly initiatives.</div>
+              <div className="textline"><span className='Points'>• Community and Environmental Impact:</span>A project that contributes <br></br> positively to the environment, such as planting trees for every
+100<br></br> units of  plastic recycled, may appeal to those with a social and<br></br> environmental conscience.</div>
+              </div>
+              <div className="third-page-photo"></div>
+            </div>
+          </div>
+          <div className="fourth-page">
+            <div className="fourth-page-heading"> 3 Major Principles</div>
+            <div className="fourth-page-content">
+              <div className="message-cards">
+                <div className="message-heading">REDUCE</div>
+                <div className="message-text">
+"Reduce" is a pivotal concept in waste management, advocating for the minimization of waste production at its source. This principle emphasizes the importance of adopting practices that result in fewer materials being consumed and less waste being generated. By promoting strategies such as prevention, efficiency, and sustainable consumption, societies can significantly reduce their environmental footprint. </div>
+                </div>
+              <div className="message-cards">
+              <div className="message-heading">REUSE</div>
+                <div className="message-text">"Reuse" is a cornerstone principle in waste management, advocating for the extended use of products and materials before they are discarded. It emphasizes finding creative ways to give items a second life through repair, refurbishment, or repurposing. By encouraging practices such as using refillable containers, donating unwanted items, or purchasing second-hand goods, societies can reduce waste generation and conserve resources.</div>
+              </div>
+              <div className="message-cards">
+              <div className="message-heading">RECYCLE</div>
+                <div className="message-text">
+"Recycle" is a core tenet of waste management, focusing on the collection, sorting, and processing of materials to create new products or raw materials. This principle involves diverting waste from landfills and incinerators by transforming it into valuable resources. By recycling materials like paper, glass, metal, plastics, and electronics, societies can conserve natural resources, reduce energy consumption, and minimize environmental pollution. </div>
+              </div>
+            </div>
+            <div className="email-div">
+            <input type="text" placeholder='Ecoconv123@gmail.com' />
+            <button>Email Us</button>
+            </div>
+           
           </div>
         </div>
       </div>
