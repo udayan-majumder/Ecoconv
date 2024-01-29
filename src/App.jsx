@@ -164,6 +164,7 @@ return (
                     </button>
                   </div>
                 </div>
+                .
               ))))))
               // console.log(price_arr[0].product.image)
            }
