@@ -351,7 +351,7 @@ border-radius: 15px;
   align-items: center;
 }
 .inside-popup{
-  height: 60%;
+  height: 100%;
   width: 50%;
   /* background-color: cyan; */
 }
@@ -373,6 +373,7 @@ border-radius: 15px;
   /* background-color: #649e92ff; */
 
 }
+
 .product-name-price{
   display: flex;
   flex-direction: column;
@@ -751,4 +752,149 @@ align-items: center;
   color: #fff;
   font-family: "Ubuntu";
 }
+.sell-popup{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color: #fff;
+}
+.sell-heading{
+ height: 20%;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #649e92ff;
+ font-family: "Rubik";
+ font-size: 40px;
+}
+.inside-popup{
+  height: 50%;
+  width: 50%;
+  /* background-color:#649e92ff; */
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+  display: flex;
+}
+.sell-popup-image{
 
+  height: 100%;
+  width: 40%;
+  background-image: url(/public/assets/recycle.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sell-popup-content{
+  height: 100%;
+  width: 60% ;
+  background-color: #649e92ff;
+  display: flex;
+  flex-direction: column;
+}
+.drop-down-container{
+  height: 20%;
+  width: 90%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.drop-down{
+  height: 30px;
+  width: 240px;
+  border: none;
+  outline: none;
+  /* border-radius: 5px; */
+  /* color: #649e92ff; */
+  background-color:#fff;
+  font-family: "Roboto Slab";
+  letter-spacing: 1px;
+}
+.drop-down-text{
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Poppins";
+}
+.sell-quantity-container{
+  height: 20%;
+  width: 90%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap:20px;
+  padding: 0px 10px;
+}
+.sell-quantity-container input{
+  height: 30px;
+  width: 100px;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: #649e92ff;
+  text-align: center;
+  outline: none;
+  font-family: "Roboto Slab";
+  letter-spacing: 1px;
+}
+.sell-text{
+  font-family: "Poppins";
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.sell-details{
+  height: 25%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.sell-details input{
+  height: 20px;
+  width: 200px;
+  color: #fff;
+  background-color: #649e92ff;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-left: -35%;
+}
+.sell-btn-container{
+  height: 40%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px
+}
+.btns{
+  height: 40px;
+  width: 80px;
+  font-family: "Poppins";
+  font-size: 16px;
+  border:none;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+.sell-btn{
+  color: #649e92ff;
+  background-color: #fff;
+  font-size: 18px;
+}
+.plant-count-text{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   text-align: center;
+   letter-spacing: 1px;
+   color: #649e92ff;
+   font-family: "Rubik";
+   font-size: 18px;
+}
