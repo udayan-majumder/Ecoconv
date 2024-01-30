@@ -48,7 +48,6 @@ console.log(curr_quantity)
   function signin() {
     const popup = new GoogleAuthProvider(app);
     signInWithPopup(auth, popup);
-    setCount(1)
   }
 
   function signout() {
