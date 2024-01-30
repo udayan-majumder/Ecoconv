@@ -304,6 +304,44 @@ return (
             </div>
            
           </div>
+          <div className={(window_count===1)? "sell-popup":"blank"}>
+            <div className="sell-heading">Want to contribute</div>
+            <div className="inside-popup">
+              <div className="sell-popup-image"></div>
+              <div className="sell-popup-content">
+                <div className="drop-down-container">
+                  <select className='drop-down'>
+                    <option className="drop-down-option" value="">{price_arr[0].product.name}</option>
+                    <option className="drop-down-option"value="">{price_arr[1].product.name}</option>
+                    <option className="drop-down-option"value="">{price_arr[2].product.name}</option>
+                    <option className="drop-down-option" value="">{price_arr[3].product.name}</option>
+                    <option className="drop-down-option" value="">{price_arr[4].product.name}</option>
+                    <option className="drop-down-option" value="">{price_arr[5].product.name}</option>
+                  </select>
+                  <div className="drop-down-text">Type</div>
+                </div>
+                <div className="sell-quantity-container">
+                 <input type="text" placeholder='0'/>
+                  <div className="sell-text">Kg</div>
+                </div>
+                <div className="sell-details">
+                  <input type="text" placeholder='Name' />
+                  <input type="text" placeholder='Contact Number' />
+                </div>
+                <div className="sell-btn-container">
+                  <button className="btns cancel-btn" onClick={()=>{
+                    setCount(0)
+                  }}>cancel</button>
+                  <button className="btns sell-btn" onClick={()=>{
+                    setCount(0)
+                    updateaddbtn(1)
+                    setpopupchange(2)
+                  }}>sell</button>
+                </div>
+              </div>
+            </div>
+            <div className="plant-count-text">Every 100 plastic recycle we plant trees. <br></br>Trees planted :4</div>
+          </div>
         </div>
       </div>
     </>
